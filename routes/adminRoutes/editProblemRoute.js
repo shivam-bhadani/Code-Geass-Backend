@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const auth = require("../../middleware/auth");
 const checkAdmin = require("../../middleware/checkAdmin");
-const getProblemController = require("../../controllers/adminRouteController/getProblemController");
+const editProblemController = require("../../controllers/adminRouteController/editProblemController");
 
-router.get("/problem/:slug", auth, checkAdmin, getProblemController);
+router.put("/problem/:id", auth, checkAdmin, editProblemController);
 
 module.exports = router;

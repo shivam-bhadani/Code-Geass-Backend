@@ -5,7 +5,7 @@ const getProblemController = async (req, res) => {
         let slug = req.params.slug;
         const problem = await Problem.findOne({slug});
         if(!problem) {
-            res.status(400).json({message: "No Problem Found"});
+            return res.status(400).json({message: "No Problem Found"});
         }
         res.status(200).json(problem);
     } catch(error) {
