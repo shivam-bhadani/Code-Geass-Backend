@@ -27,6 +27,9 @@ const checkProblemController = async (req, res) => {
             userOutput = await executePy(filePath, inputPath);
         }
         userOutput = userOutput.trim();
+        // console.log(userOutput);
+        // console.log("---");
+        // console.log(problem.output);
         if (userOutput == problem.output) {
             let addScore;
             if (problem.difficulty == "Easy") {

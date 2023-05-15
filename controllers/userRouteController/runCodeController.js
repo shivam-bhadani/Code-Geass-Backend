@@ -18,7 +18,6 @@ const runCodeController = async (req, res) => {
 
         if (lang === "cpp") {
             const output = await executeCpp(filePath, input);
-            console.log(output);
             return res.status(200).json(output);
         }
 
